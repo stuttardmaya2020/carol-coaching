@@ -4,6 +4,8 @@ Dated decisions, feedback and evidence, newest first. This is the raw material f
 
 ## 2026-10-28
 
+- Comparable site review of 8 coaching sites done (see `research/comparable-sites/`). Carol's edge is warmth and breadth: competitors narrow to one audience, and none offers anything as friendly as her coffee.
+- Tools decision: use Figma's free plan for mood boards and rough wireframes only. Do the high-fidelity design in code (design in the browser with Claude Code and impeccable), and screenshot each iteration here. Build with React and Vite, deployed to GitHub Pages. Maya also wants to learn React along the way.
 - Uploaded screenshots of all six pages of the current site to `research/current-site/screenshots/`.
 - Current-site audit done from the screenshots. Main finding: strong content (12 testimonials, a coffee-first offer, solid credentials) but no clear call to action, and the best material is buried on inner pages.
 - Confirmed that the home page photo of Carol with another woman is the Jane photo to remove.
