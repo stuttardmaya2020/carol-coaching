@@ -25,6 +25,8 @@ Home (tells the whole story on one scroll), About Carol, How I work, Get in touc
 
 ## Build
 
-- Static site in `site/`, served by GitHub Pages. It doesn't need to be functional beyond a contact form placeholder or mailto link.
+- React + Vite app in `site/`, deployed to GitHub Pages by `.github/workflows/deploy.yml` on push to `main`. It doesn't need to be functional beyond a contact form placeholder or mailto link.
+- Design rules are in `DESIGN.md` and the tokens in `site/src/styles/tokens.css`. Use tokens, never raw values. Product context is in `PRODUCT.md`.
+- Maya is learning React. When adding code, keep it simple and idiomatic, and explain new concepts in `LEARNING.md` when they first appear.
 - Target WCAG 2.2 AA and Lighthouse 90+.
 - Log notable design decisions in `design-log.md`.
