@@ -13,7 +13,7 @@ A redesign of Carol Fox's coaching website, run as a lean user-centred design pr
 - [Mood board starter](https://claude.ai/artifact/D3HBojfWqogqVy3MDMpVvf): two directions and a Figma guide (source in `design/mood-boards/mood-board-starter.html`)
 - [`PRODUCT.md`](PRODUCT.md) and [`DESIGN.md`](DESIGN.md): the context impeccable reads
 - [`LEARNING.md`](LEARNING.md): how the React site works and how to run it
-- Preview site (GitHub Pages): _link to add_
+- Preview site: [stuttardmaya2020.github.io/carol-coaching](https://stuttardmaya2020.github.io/carol-coaching/)
 
 ## Process
 
