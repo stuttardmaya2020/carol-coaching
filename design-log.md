@@ -4,6 +4,7 @@ Dated decisions, feedback and evidence, newest first. This is the raw material f
 
 ## 2026-10-28
 
+- Updated `PRODUCT.md` to the current impeccable schema. Confirmed positioning: one coach for every career stage, a former headhunter's eye, and a first step that is a coffee on her. Testimonials can be quoted with names and roles. Prices and session formats stay undecided, and photos are placeholders until the original files arrive.
 - Decided to skip showing Carol mood boards. Choosing between two abstract boards could confuse her, so she'll react to a real coded first draft instead.
 - Chosen direction: Newsreader and Instrument Sans fonts (from "Warm editorial") with the white, violet, lilac and apricot palette (from "Modern confident"). Warm, experienced type with clean, current colour.
 - Set up the React and Vite project in `site/` with design tokens, `PRODUCT.md` and `DESIGN.md` for impeccable, and a GitHub Pages deploy. Placeholder screenshot: `design/placeholder-2026-10-28.png`.
