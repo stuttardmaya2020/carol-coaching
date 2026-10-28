@@ -4,6 +4,12 @@ Dated decisions, feedback and evidence, newest first. This is the raw material f
 
 ## 2026-10-28
 
+- Added Carol's black-and-white portrait (chin on hand) to the letter on Home, in place of the placeholder. It's only 232 × 228 pixels, which is sharp on phones but soft on Retina desktops. I need the full-resolution original from Carol. The About section keeps a placeholder until there's a second photo.
+- Built the first draft of Home in React, as "a letter from Carol". The first screen is a short signed letter beside a small portrait, with three "If you're…" links (starting out, mid-career, leading) and the coffee button. Each link jumps to that stage's section, and an apricot highlight draws under its heading. Then come how it works, about Carol, and a deep violet invitation to talk. Screenshots are in `.impeccable/review/`.
+- Shaped Home with impeccable. I chose three career-stage doors early and Carol leading the first screen. Of three structures (a first conversation, the portrait as the door, a letter from Carol), I picked the letter.
+- Testimonials on Home: Alex Quinan (graduate), Amanda Jones (mid-career, shortened with "…") and Kerry Glazer (chief executive), copied exactly from the old site.
+- Copy uses "as few as two sessions" from Carol's old How coaching works page, not "one session", which PRODUCT.md had assumed.
+- On phones, the portrait shrinks and the header tightens so that the letter, all three links and the coffee button fit on a 390 × 844 screen.
 - Updated `PRODUCT.md` to the current impeccable schema. Confirmed positioning: one coach for every career stage, a former headhunter's eye, and a first step that is a coffee on her. Testimonials can be quoted with names and roles. Prices and session formats stay undecided, and photos are placeholders until the original files arrive.
 - Decided to skip showing Carol mood boards. Choosing between two abstract boards could confuse her, so she'll react to a real coded first draft instead.
 - Chosen direction: Newsreader and Instrument Sans fonts (from "Warm editorial") with the white, violet, lilac and apricot palette (from "Modern confident"). Warm, experienced type with clean, current colour.

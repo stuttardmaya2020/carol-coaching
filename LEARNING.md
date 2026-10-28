@@ -17,10 +17,13 @@ site/
   package.json           the project's dependencies and commands
   src/
     main.jsx             entry point: puts <App /> into the page
-    App.jsx              the root component (currently a placeholder)
+    App.jsx              the root component: header, page, footer
+    Home.jsx             the Home page, including the three career stages
+    contact.js           placeholder email and phone, in one place
     index.css            base styles for the whole site
     styles/tokens.css    colours, fonts and spacing. Change the design here
-    components/          reusable pieces, e.g. Button.jsx (to come)
+    components/          reusable pieces, each with its own .css file
+                         (Button, Letter, Stage, Testimonial, Invitation…)
 ```
 
 ## Running it on your Mac
@@ -42,6 +45,16 @@ Edit a file, save, and the browser updates on its own. Press `Ctrl + C` in Termi
 - **Props:** inputs to a component, like `<Button label="Let's have a coffee" />`. Inside, read them as `function Button({ label })`.
 - **className:** JSX uses `className` instead of `class`, because `class` is a reserved word in JavaScript.
 - **CSS variables (tokens):** `var(--color-primary)` reads a value from `tokens.css`. Change it once, and it changes everywhere.
+- **A CSS file per component:** `Letter.jsx` starts with `import './Letter.css'`. Vite bundles every imported CSS file, so each component's styles sit next to it.
+- **Children:** whatever you put between a component's tags arrives as the `children` prop. `<Button href="…">Let's have a coffee</Button>` gives `Button` the text to show.
+- **Default props:** `function Button({ variant = 'primary' })` uses `'primary'` when no `variant` is passed.
+- **Lists with `.map()`:** `Home.jsx` keeps the three stages in an array. `stages.map((stage) => <Stage … />)` turns each item into a component. Each one needs a unique `key` (here `stage.id`) so React can keep track of them.
+- **Spreading props:** `<Stage {...stage} />` passes every field of the `stage` object as a prop. It's the same as writing `id={stage.id} lead={stage.lead}` and so on.
+- **Fragments:** `<>…</>` groups several elements without adding an extra `<div>` to the page.
+- **Sharing data between files:** `contact.js` uses `export const EMAIL = …`, and components get it with `import { EMAIL } from '../contact.js'`.
+- **Importing images:** `import carolPortrait from '../assets/carol-portrait.png'` gives you the image's URL, which you pass to `<img src={carolPortrait} />`. Vite copies the file into the build and adds the `/carol-coaching/` prefix for you.
+- **Choosing what to show with `if`:** `Portrait` returns an `<img>` when it has a `src`, and the placeholder otherwise. A component can `return` early like any function.
+- **Jump links and `:target`:** a link to `#mid-career` scrolls to the element with `id="mid-career"`. CSS can style whichever section is the current target with `.stage:target`. That's how the apricot highlight works, with no JavaScript.
 
 ## Designing with impeccable
 

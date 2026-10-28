@@ -1,0 +1,104 @@
+.letter {
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-2) var(--space-12);
+}
+
+/* On phones the caption sits beside the small portrait to save height. */
+.letter-figure {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+.letter-portrait {
+  flex: none;
+  width: var(--portrait-small);
+}
+
+.letter-caption {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-wrap: balance;
+}
+
+.letter-text {
+  max-width: 34ch;
+  font-family: var(--font-display);
+  font-size: var(--text-letter);
+  line-height: 1.35;
+  text-wrap: pretty; /* the h1 reads as letter text, so wrap it like a paragraph */
+}
+
+/* Phone spacing is tighter so the whole letter and its sign-off fit the first screen. */
+.letter-text + .letter-text {
+  margin-top: var(--space-2);
+}
+
+.letter-prompt {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.letter-links {
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.letter-links a {
+  display: inline-block;
+  padding-block: var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.letter-signoff {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.letter-signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+
+.letter-note {
+  flex-basis: 100%;
+}
+
+@media (min-width: 56rem) {
+  .letter {
+    grid-template-columns: var(--portrait-width) minmax(0, 1fr);
+    gap: var(--space-12);
+    align-items: start;
+    padding-block: var(--space-8) var(--space-12);
+  }
+
+  .letter-figure {
+    display: block;
+    margin-top: var(--space-1);
+  }
+
+  .letter-portrait {
+    width: 100%;
+  }
+
+  .letter-caption {
+    margin-top: var(--space-2);
+  }
+
+  .letter-text + .letter-text {
+    margin-top: var(--space-3);
+  }
+
+  .letter-prompt,
+  .letter-signoff {
+    margin-top: var(--space-6);
+  }
+}

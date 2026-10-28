@@ -1,21 +1,19 @@
-// The root component. Right now it's a placeholder that proves the fonts
-// and colours are wired up. The real home page gets built here with
-// `/impeccable shape`, split into components in src/components/.
+import SiteHeader from './components/SiteHeader.jsx'
+import SiteFooter from './components/SiteFooter.jsx'
+import Home from './Home.jsx'
+
+// The root component: the header and footer wrap the page content.
+// When About, How I work and Get in touch are built, they'll be
+// swapped in here in place of <Home />.
 function App() {
   return (
-    <main className="placeholder">
-      <p className="placeholder-eyebrow">Carol Fox Coaching</p>
-      <h1>
-        Talk it through over coffee. <em>One conversation</em> might be all you need.
-      </h1>
-      <p>
-        The new site is being built. This page checks that the fonts and
-        colours from <code>src/styles/tokens.css</code> are working.
-      </p>
-      <a className="placeholder-button" href="mailto:hello@example.com">
-        Let&rsquo;s have a coffee
-      </a>
-    </main>
+    <>
+      <SiteHeader />
+      <main id="main">
+        <Home />
+      </main>
+      <SiteFooter />
+    </>
   )
 }
 

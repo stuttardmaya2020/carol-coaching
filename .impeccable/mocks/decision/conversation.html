@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Home sketch: A first conversation</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; background: #FFFFFF; color: #1C1B22; font: 17px/1.55 "Instrument Sans", sans-serif; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 32px 96px; }
+  .name { font-family: Newsreader, serif; font-size: 24px; }
+  nav { display: flex; gap: 40px; align-items: center; font-weight: 600; font-size: 15px; }
+  nav a { color: #1C1B22; text-decoration: none; }
+  .pill { background: #6B3FA0; color: #fff; border-radius: 999px; padding: 14px 26px; font-weight: 600; text-decoration: none; display: inline-block; }
+  .hero { display: grid; grid-template-columns: 440px 1fr; gap: 88px; padding: 32px 96px 0; align-items: start; }
+  .photo { height: 520px; background: #3a3840; border-radius: 12px; position: relative; }
+  .photo span { position: absolute; left: 20px; bottom: 20px; color: #fff; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+  .greeting { padding-top: 40px; }
+  .label { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: #5C5866; }
+  h1 { font-family: Newsreader, serif; font-weight: 400; font-size: 62px; line-height: 1.08; margin: 16px 0 24px; max-width: 760px; }
+  h1 em { color: #6B3FA0; }
+  .lede { font-size: 20px; max-width: 620px; color: #1C1B22; }
+  .offer { margin-top: 32px; display: flex; gap: 24px; align-items: center; }
+  .offer small { color: #5C5866; font-size: 15px; }
+  .ask { margin-top: 56px; border-top: 1px solid #E4E0EA; padding-top: 28px; }
+  .ask p { font-family: Newsreader, serif; font-style: italic; font-size: 28px; }
+  .doors { display: flex; gap: 16px; margin-top: 20px; }
+  .door { border: 1.5px solid #6B3FA0; border-radius: 999px; padding: 14px 24px; color: #6B3FA0; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <div class="name">Carol Fox</div>
+  <nav><a href="#">About Carol</a><a href="#">How I work</a><a href="#">Get in touch</a></nav>
+</header>
+<section class="hero">
+  <div class="photo"><span>Portrait placeholder</span></div>
+  <div class="greeting">
+    <p class="label">Life and business coach · London and remote</p>
+    <h1>Hello, I'm Carol. Let's work out <em>what you want next.</em></h1>
+    <p class="lede">I've coached more than 3,000 people over 20 years, from graduates in their first job to CEOs. Before that, I was a headhunter.</p>
+    <div class="offer"><a class="pill" href="#">Let's have a coffee</a><small>Or a call. It's on me, with no obligation.</small></div>
+    <div class="ask">
+      <p>Which sounds like you?</p>
+      <div class="doors">
+        <span class="door">I'm just starting out</span>
+        <span class="door">I'm mid-career and stuck</span>
+        <span class="door">I lead a team or a business</span>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

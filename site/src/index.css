@@ -10,6 +10,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   margin: 0;
   background: var(--color-bg);
@@ -17,6 +23,11 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--leading-body);
+}
+
+::selection {
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 h1,
@@ -29,13 +40,28 @@ h3 {
   margin: 0;
 }
 
+/* Italic violet marks the key phrase in a heading (see DESIGN.md). */
+h1 em,
+h2 em,
+h3 em {
+  color: var(--color-primary);
+}
+
 p {
   margin: 0;
   max-width: var(--text-width);
+  text-wrap: pretty; /* avoids a single word alone on the last line */
 }
 
 a {
   color: var(--color-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration-thickness: 2px;
 }
 
 img {
@@ -54,45 +80,35 @@ img {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 }
 
-/* Placeholder page styles. Delete these when the real home page is built. */
-.placeholder {
+/* Centres a section's content and keeps it off the screen edges. */
+.container {
   max-width: var(--content-width);
-  margin: 0 auto;
-  padding: var(--space-12) var(--space-3);
-  display: grid;
-  gap: var(--space-3);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
 }
 
-.placeholder-eyebrow {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
+@media (min-width: 48rem) {
+  .container {
+    padding-inline: var(--space-6);
+  }
 }
 
-.placeholder h1 {
-  font-size: var(--text-3xl);
-  max-width: 18ch;
+/* Hidden until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  z-index: 1;
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
 }
 
-.placeholder h1 em {
-  color: var(--color-primary);
-}
-
-.placeholder-button {
-  justify-self: start;
-  background: var(--color-primary);
-  color: var(--color-bg);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.placeholder-button:hover {
-  background: var(--color-primary-dark);
+.skip-link:focus {
+  transform: none;
 }

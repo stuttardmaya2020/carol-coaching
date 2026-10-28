@@ -1,0 +1,42 @@
+.how {
+  padding-block: var(--space-12);
+  background: var(--color-surface);
+  scroll-margin-top: var(--space-4);
+}
+
+.how-title {
+  font-size: var(--text-heading);
+}
+
+.how-steps {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.how-steps li {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-text);
+}
+
+.how-steps h3 {
+  font-size: var(--text-xl);
+}
+
+.how-steps p {
+  margin-top: var(--space-1);
+}
+
+.how-cost {
+  margin-top: var(--space-8);
+  font-size: var(--text-lg);
+}
+
+@media (min-width: 48rem) {
+  .how-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}

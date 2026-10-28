@@ -1,0 +1,31 @@
+.testimonial {
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.testimonial blockquote {
+  margin: 0;
+}
+
+.testimonial blockquote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.45;
+}
+
+.testimonial blockquote p::before {
+  content: "\201C";
+}
+
+.testimonial blockquote p::after {
+  content: "\201D";
+}
+
+.testimonial figcaption {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}

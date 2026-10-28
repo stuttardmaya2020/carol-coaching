@@ -16,6 +16,7 @@
   --color-surface: #e9e1f4;     /* Lilac: tinted sections and cards */
   --color-highlight: #f2b880;   /* Apricot: highlights and small accents only, never text */
   --color-border: #e4e0ea;
+  --color-placeholder: #6e6a75; /* Mid grey for photo placeholders (white label 5.3:1) */
 
   /* Type */
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
@@ -27,6 +28,8 @@
   --text-xl: 1.75rem;    /* 28px */
   --text-2xl: 2.5rem;    /* 40px */
   --text-3xl: clamp(2.5rem, 6vw, 4rem); /* hero headline */
+  --text-letter: clamp(1.375rem, 1rem + 1.4vw, 1.875rem); /* Carol's letter: 22px on phones, 30px on desktop */
+  --text-heading: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);   /* section headings: 28px to 40px */
 
   --leading-tight: 1.1;
   --leading-body: 1.6;
@@ -45,7 +48,13 @@
   --radius-md: 12px;
   --radius-pill: 999px;
 
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* fast start, gentle stop */
+  --duration-slow: 700ms;
+
   /* Layout */
   --content-width: 72rem;
   --text-width: 65ch;
+  --portrait-small: 5.5rem; /* Carol's portrait above the letter, phones */
+  --portrait-width: 16rem; /* Carol's portrait beside the letter, desktop */
 }

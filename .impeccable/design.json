@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T21:04:57+00:00",
+  "title": "Design system: Carol Fox Coaching",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#1c1b22",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#252429",
+          "#424147",
+          "#616068",
+          "#828189",
+          "#a5a4ab",
+          "#c9c8ce",
+          "#eeeef2"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Charcoal",
+        "canonical": "#5c5866",
+        "tonalRamp": [
+          "#0c0a0f",
+          "#26242b",
+          "#43404a",
+          "#635f6c",
+          "#84808e",
+          "#a6a3af",
+          "#cac7d1",
+          "#efedf4"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Violet",
+        "canonical": "#6b3fa0",
+        "tonalRamp": [
+          "#110321",
+          "#2d1748",
+          "#4e2f74",
+          "#704aa2",
+          "#926cc7",
+          "#b294e1",
+          "#d3bcfa",
+          "#f6e5ff"
+        ]
+      },
+      "primary-dark": {
+        "role": "primary",
+        "displayName": "Deep Violet",
+        "canonical": "#54307f",
+        "tonalRamp": [
+          "#10051e",
+          "#2c1a43",
+          "#4c336c",
+          "#6e4e99",
+          "#8f70bd",
+          "#b097d8",
+          "#d2bef3",
+          "#f5e7ff"
+        ]
+      },
+      "surface": {
+        "role": "secondary",
+        "displayName": "Lilac",
+        "canonical": "#e9e1f4",
+        "tonalRamp": [
+          "#0c0a0f",
+          "#27232b",
+          "#443f4b",
+          "#645e6d",
+          "#867f8f",
+          "#a8a2af",
+          "#cbc7d2",
+          "#f0edf5"
+        ]
+      },
+      "highlight": {
+        "role": "tertiary",
+        "displayName": "Apricot",
+        "canonical": "#f2b880",
+        "tonalRamp": [
+          "#170700",
+          "#381e01",
+          "#5d3910",
+          "#845523",
+          "#a87745",
+          "#c69c74",
+          "#e4c2a2",
+          "#ffe9d2"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Pale Lilac Grey",
+        "canonical": "#e4e0ea",
+        "tonalRamp": [
+          "#0c0b0d",
+          "#262428",
+          "#434147",
+          "#635f67",
+          "#848189",
+          "#a6a3ab",
+          "#cac8ce",
+          "#efedf2"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Grey",
+        "canonical": "#6e6a75",
+        "tonalRamp": [
+          "#0c0a0e",
+          "#262429",
+          "#434048",
+          "#635f69",
+          "#84808b",
+          "#a6a3ac",
+          "#cac8cf",
+          "#efedf3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The closing invitation headline (--text-3xl)."
+      },
+      "letter": {
+        "displayName": "Letter",
+        "purpose": "Carol's letter on the first screen (--text-letter), wrapped like a paragraph, about 34 characters wide."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Section headings (--text-heading), with one italic key phrase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "How-it-works step titles and the recognition line (--text-xl)."
+      },
+      "body-large": {
+        "displayName": "Large body",
+        "purpose": "Stage body text, invitation text, testimonial quotes, letter links (--text-lg)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, about 65 characters wide."
+      },
+      "label": {
+        "displayName": "Small",
+        "purpose": "Captions, testimonial names, placeholder labels, the footer (--text-sm). Never uppercase eyebrows."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Fast start, gentle stop. All transitions."
+      },
+      {
+        "name": "duration-slow",
+        "value": "700ms",
+        "purpose": "The apricot highlight drawing in under a targeted stage heading."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "48rem",
+        "purpose": "Wider container padding, larger nav, three how-it-works columns."
+      },
+      {
+        "name": "lg",
+        "value": "56rem",
+        "purpose": "Two-column letter, stages and about."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Violet pill for the one main action on a screen, such as \"Let's have a coffee\".",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Let’s have a coffee</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; min-height: var(--space-6); padding: var(--space-1) var(--space-4); border-radius: var(--radius-pill); background: var(--color-primary); color: var(--color-bg); font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background-color 200ms var(--ease-out); } .ds-btn-primary:hover { background: var(--color-primary-dark); } .ds-btn-primary:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "White pill with deep violet text, only on the deep violet close.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn-light\" href=\"#\">Email Carol</a></div>",
+      "css": ".ds-dark { background: var(--color-primary-dark); padding: var(--space-4); } .ds-btn-light { display: inline-flex; align-items: center; min-height: var(--space-6); padding: var(--space-1) var(--space-4); border-radius: var(--radius-pill); background: var(--color-bg); color: var(--color-primary-dark); font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background-color 200ms var(--ease-out); } .ds-btn-light:hover { background: var(--color-surface); } .ds-btn-light:focus-visible { outline: 3px solid var(--color-bg); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "link",
+      "description": "Violet underlined link; the \"If you're…\" links in the letter use it at 20px, weight 600.",
+      "html": "<a class=\"ds-link\" href=\"#\">If you’re just starting out</a>",
+      "css": ".ds-link { color: var(--color-primary); font-family: var(--font-body); font-size: var(--text-lg); font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 0.2em; } .ds-link:hover { color: var(--color-primary-dark); text-decoration-thickness: 2px; } .ds-link:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "site-nav",
+      "description": "Serif site name, sans links in charcoal that turn violet and underlined on hover.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-site-name\" href=\"#\">Carol Fox</a><nav><ul class=\"ds-nav\"><li><a href=\"#\">About Carol</a></li><li><a href=\"#\">How I work</a></li><li><a href=\"#\">Get in touch</a></li></ul></nav></header>",
+      "css": ".ds-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 var(--space-4); padding-block: var(--space-3); } .ds-site-name { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text); text-decoration: none; } .ds-nav { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); margin: 0; padding: 0; list-style: none; } .ds-nav a { display: inline-block; padding-block: var(--space-1); font-family: var(--font-body); font-weight: 600; color: var(--color-text); text-decoration: none; } .ds-nav a:hover { color: var(--color-primary); text-decoration: underline; } .ds-nav a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }"
+    },
+    {
+      "name": "Letter Sign-off",
+      "kind": "custom",
+      "refersTo": "letter",
+      "description": "Italic Newsreader \"Carol\" signature beside the one primary pill.",
+      "html": "<div class=\"ds-signoff\"><p class=\"ds-signature\">Carol</p><a class=\"ds-signoff-btn\" href=\"#\">Let’s have a coffee</a><p class=\"ds-note\">Or a call. It’s on me, with no obligation.</p></div>",
+      "css": ".ds-signoff { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-4); font-family: var(--font-body); color: var(--color-text); } .ds-signature { margin: 0; font-family: var(--font-display); font-style: italic; font-size: var(--text-2xl); line-height: 1; } .ds-signoff-btn { display: inline-flex; align-items: center; min-height: var(--space-6); padding: var(--space-1) var(--space-4); border-radius: var(--radius-pill); background: var(--color-primary); color: var(--color-bg); font-weight: 600; text-decoration: none; } .ds-signoff-btn:hover { background: var(--color-primary-dark); } .ds-note { flex-basis: 100%; margin: 0; }"
+    },
+    {
+      "name": "Stage Heading",
+      "kind": "custom",
+      "refersTo": "stage",
+      "description": "Newsreader heading with one violet italic phrase and a run-on comma; the apricot highlight draws under it when it is the jump target (shown drawn here).",
+      "html": "<h2 class=\"ds-stage-title\"><span class=\"ds-stage-mark\">If you’re <em>mid-career and want more from work</em>,</span></h2>",
+      "css": ".ds-stage-title { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: var(--text-heading); line-height: var(--leading-tight); color: var(--color-text); text-wrap: balance; } .ds-stage-title em { color: var(--color-primary); } .ds-stage-mark { background-image: linear-gradient(var(--color-highlight), var(--color-highlight)); background-repeat: no-repeat; background-position: 0 92%; background-size: 100% 0.3em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }"
+    },
+    {
+      "name": "Testimonial",
+      "kind": "card",
+      "refersTo": "testimonial",
+      "description": "Lilac card, Newsreader italic quote, muted name and role. \"…\" marks a shortened quote.",
+      "html": "<figure class=\"ds-testimonial\"><blockquote><p>Carol was a very calming influence, helping me to put things in perspective and form a plan.</p></blockquote><figcaption>Alex Quinan, Graduate of Leeds University</figcaption></figure>",
+      "css": ".ds-testimonial { margin: 0; padding: var(--space-4); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); } .ds-testimonial blockquote { margin: 0; } .ds-testimonial p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: var(--text-lg); line-height: 1.45; } .ds-testimonial p::before { content: \"\\201C\"; } .ds-testimonial p::after { content: \"\\201D\"; } .ds-testimonial figcaption { margin-top: var(--space-2); font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-muted); }"
+    },
+    {
+      "name": "Invitation",
+      "kind": "custom",
+      "refersTo": "invitation-band",
+      "description": "Deep violet close: white headline whose key phrase relies on italic alone, lilac body, white signature and the light pill.",
+      "html": "<section class=\"ds-invite\"><h2>Let’s have <em>a coffee</em>.</h2><p class=\"ds-invite-text\">A coffee in London or a call, wherever you are. It’s on me, with no obligation.</p><div class=\"ds-invite-actions\"><p class=\"ds-invite-sig\">Carol</p><a class=\"ds-invite-btn\" href=\"#\">Email Carol</a></div></section>",
+      "css": ".ds-invite { display: grid; gap: var(--space-4); padding: var(--space-8) var(--space-4); background: var(--color-primary-dark); color: var(--color-bg); font-family: var(--font-body); } .ds-invite h2 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: var(--text-3xl); line-height: var(--leading-tight); } .ds-invite h2 em { color: inherit; } .ds-invite-text { margin: 0; max-width: 44ch; font-size: var(--text-lg); color: var(--color-surface); } .ds-invite-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-4); } .ds-invite-sig { margin: 0; font-family: var(--font-display); font-style: italic; font-size: var(--text-2xl); line-height: 1; } .ds-invite-btn { display: inline-flex; align-items: center; min-height: var(--space-6); padding: var(--space-1) var(--space-4); border-radius: var(--radius-pill); background: var(--color-bg); color: var(--color-primary-dark); font-weight: 600; text-decoration: none; } .ds-invite-btn:hover { background: var(--color-surface); } .ds-invite :focus-visible { outline: 3px solid var(--color-bg); outline-offset: 3px; }"
+    },
+    {
+      "name": "Portrait Placeholder",
+      "kind": "custom",
+      "refersTo": "portrait-placeholder",
+      "description": "4:5 mid-grey stand-in with a white label until Carol's black-and-white portraits arrive.",
+      "html": "<div class=\"ds-portrait\" role=\"img\" aria-label=\"Placeholder: Photo of Carol to come\"><span aria-hidden=\"true\">Photo of Carol to come</span></div>",
+      "css": ".ds-portrait { display: flex; align-items: flex-end; width: 12rem; aspect-ratio: 4 / 5; padding: var(--space-2); border-radius: var(--radius-md); background: var(--color-placeholder); color: var(--color-bg); font-family: var(--font-body); font-size: var(--text-sm); line-height: 1.3; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A short, signed letter from Carol",
+    "overview": "Chosen 2026-10-28: the fonts from \"Warm editorial\" with the colours from \"Modern confident\". The result should feel warm and experienced in its type, and clean and current in its colour. Think a thoughtful conversation, not a corporate brochure.\n\nHome reads as a short, signed letter from Carol. The page is mostly white and charcoal, set in a serif at letter size. Colour comes in fields: lilac for quotes and the how-it-works band, deep violet for the close.",
+    "keyCharacteristics": [
+      "White and charcoal, set in Newsreader at letter size",
+      "One violet italic phrase per heading",
+      "Lilac fields for quotes and the how-it-works band",
+      "Apricot only for the jump-target highlight",
+      "A deep violet close with an italic white signature",
+      "Pill buttons, underlined violet links, no shadows or gradients"
+    ],
+    "rules": [
+      {
+        "name": "The Deep Violet Close",
+        "body": "The invitation that ends a page sits on a full-bleed --color-primary-dark band with white text and an italic white \"Carol\" signature. Its key phrase stays white and relies on the italic alone, because violet on violet would not read. Use the light button there, never the violet one.",
+        "section": "colors"
+      },
+      {
+        "name": "The Apricot Rule",
+        "body": "Apricot is reserved for one job: the highlight that draws under a stage heading when a visitor has jumped to it (:target). Never use it for text, backgrounds, buttons or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Phrase Rule",
+        "body": "Each heading has one key phrase in italic. On white it is violet; on deep violet it stays white.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "No eyebrow or kicker labels above headings. The heading says it on its own.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Use violet sparingly: one main button per screen, and italic violet for the key phrase in a headline.",
+      "Be generous with spacing in steps of 8px: white space is part of the calm.",
+      "Lead with Carol's own black-and-white portraits."
+    ],
+    "donts": [
+      "No drop shadows and no colour gradients.",
+      "Avoid generic stock metaphors (ladders, jumping dancers, handshakes).",
+      "No eyebrow or kicker labels above headings."
+    ]
+  }
+}
