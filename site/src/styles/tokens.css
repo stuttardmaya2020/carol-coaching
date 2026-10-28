@@ -1,0 +1,51 @@
+/*
+  Design tokens for Carol Fox Coaching.
+  Every colour, font and spacing value on the site comes from here, so
+  changing one value here changes it everywhere. Impeccable reads this file.
+
+  Direction (chosen 2026-10-28): fonts from "Warm editorial",
+  colours from "Modern confident".
+*/
+:root {
+  /* Colour */
+  --color-bg: #ffffff;          /* White: page background */
+  --color-text: #1c1b22;        /* Charcoal: body text and headings */
+  --color-text-muted: #5c5866;  /* Secondary text, captions (6.6:1 on white) */
+  --color-primary: #6b3fa0;     /* Violet: buttons, links, key headings (7.4:1 on white) */
+  --color-primary-dark: #54307f;/* Violet, hover and pressed states */
+  --color-surface: #e9e1f4;     /* Lilac: tinted sections and cards */
+  --color-highlight: #f2b880;   /* Apricot: highlights and small accents only, never text */
+  --color-border: #e4e0ea;
+
+  /* Type */
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1.0625rem;/* 17px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.75rem;    /* 28px */
+  --text-2xl: 2.5rem;    /* 40px */
+  --text-3xl: clamp(2.5rem, 6vw, 4rem); /* hero headline */
+
+  --leading-tight: 1.1;
+  --leading-body: 1.6;
+
+  /* Spacing (steps of 8px) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --content-width: 72rem;
+  --text-width: 65ch;
+}

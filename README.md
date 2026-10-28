@@ -11,8 +11,8 @@ A redesign of Carol Fox's coaching website, run as a lean user-centred design pr
 
 - [Project brief, UCD plan, Define work and current-site audit](https://claude.ai/artifact/SXu2yaeGmUXV8yNS8J3Ypw) (Claude Doc)
 - [Mood board starter](https://claude.ai/artifact/D3HBojfWqogqVy3MDMpVvf): two directions and a Figma guide (source in `design/mood-boards/mood-board-starter.html`)
-- Figma mood boards: _link to add_
-- Figma wireframes: _link to add_
+- [`PRODUCT.md`](PRODUCT.md) and [`DESIGN.md`](DESIGN.md): the context impeccable reads
+- [`LEARNING.md`](LEARNING.md): how the React site works and how to run it
 - Preview site (GitHub Pages): _link to add_
 
 ## Process
@@ -34,6 +34,6 @@ define/                  summaries of the Define work
 design/
   mood-boards/           exports from Figma
   wireframes/            exports from Figma
-site/                    the new website (served by GitHub Pages)
+site/                    the new website, React + Vite (served by GitHub Pages)
 design-log.md            dated decisions and feedback, for the case study
 ```
