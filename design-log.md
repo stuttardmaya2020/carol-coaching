@@ -4,6 +4,7 @@ Dated decisions, feedback and evidence, newest first. This is the raw material f
 
 ## 2026-10-28
 
+- Mood board starter made with two directions for Carol to choose between: A "Warm editorial" (oat, plum, Newsreader and Instrument Sans) and B "Modern confident" (white, violet, apricot, Bricolage Grotesque and Figtree). Both use the same layout so Carol compares feeling, not arrangement. Mood boards aren't strictly part of UCD, but they're a cheap way to agree a direction with the client before building.
 - Comparable site review of 8 coaching sites done (see `research/comparable-sites/`). Carol's edge is warmth and breadth: competitors narrow to one audience, and none offers anything as friendly as her coffee.
 - Tools decision: use Figma's free plan for mood boards and rough wireframes only. Do the high-fidelity design in code (design in the browser with Claude Code and impeccable), and screenshot each iteration here. Build with React and Vite, deployed to GitHub Pages. Maya also wants to learn React along the way.
 - Uploaded screenshots of all six pages of the current site to `research/current-site/screenshots/`.

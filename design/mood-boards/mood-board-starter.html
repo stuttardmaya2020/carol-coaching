@@ -1,0 +1,389 @@
+<title>Carol Fox Mood Boards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Figtree:wght@400;600&display=swap">
+<style>
+/* Layout: a working guide. One column of instructions, with two full-width mood board templates rendered in their own palettes. */
+:root {
+  --bg: #f7f6f8;
+  --surface: #ffffff;
+  --fg: #22202a;
+  --muted: #615c6b;
+  --line: #dedae3;
+  --accent: #5b2a55;
+  --font-ui: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: "Newsreader", Georgia, "Times New Roman", serif;
+
+  /* Direction A: Warm editorial */
+  --a-oat: #f3eee6;
+  --a-ink: #24202a;
+  --a-plum: #5b2a55;
+  --a-heather: #b9a3bd;
+  --a-stone: #8a8178;
+  /* Direction B: Modern confident */
+  --b-white: #ffffff;
+  --b-charcoal: #1c1b22;
+  --b-violet: #6b3fa0;
+  --b-lilac: #e9e1f4;
+  --b-apricot: #f2b880;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17151b; --surface: #211e26; --fg: #ece9f0; --muted: #aaa4b4; --line: #38333f; --accent: #d4a8cc;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17151b; --surface: #211e26; --fg: #ece9f0; --muted: #aaa4b4; --line: #38333f; --accent: #d4a8cc;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 72px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 56px; }
+.prose { max-width: 68ch; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-family: var(--font-head); font-weight: 600; font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-family: var(--font-head); font-weight: 600; font-size: 1.75rem; }
+h3 { font-size: 1rem; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.stack { display: grid; gap: 16px; }
+.stack-sm { display: grid; gap: 8px; }
+.lead { font-size: 1.125rem; color: var(--muted); }
+a { color: var(--accent); }
+
+/* Layout diagram */
+.diagram {
+  display: grid;
+  grid-template-columns: 5fr 3fr 4fr;
+  grid-template-rows: repeat(4, minmax(56px, auto));
+  gap: 8px;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+}
+.zone {
+  border: 1.5px dashed var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+}
+.zone b { color: var(--fg); font-weight: 600; }
+.z-hero { grid-column: 1; grid-row: 1 / 5; }
+.z-img2 { grid-column: 2; grid-row: 1 / 3; }
+.z-img3 { grid-column: 2; grid-row: 3 / 5; }
+.z-head { grid-column: 3; grid-row: 1; }
+.z-type { grid-column: 3; grid-row: 2; }
+.z-swatch { grid-column: 3; grid-row: 3; }
+.z-refs { grid-column: 3; grid-row: 4; }
+
+ol.steps { margin: 0; padding-left: 1.4em; display: grid; gap: 14px; max-width: 72ch; }
+ol.steps li::marker { color: var(--accent); font-weight: 600; }
+kbd {
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+/* Mood boards */
+.board {
+  display: grid;
+  grid-template-columns: 5fr 3fr 4fr;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 12px;
+  max-width: 100%;
+}
+.board .img {
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  font-size: 0.8125rem;
+  min-height: 140px;
+  min-width: 0;
+}
+.board .img .tag { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.board .hero { grid-row: span 2; min-height: 380px; }
+.board .col2 { display: grid; gap: 14px; grid-row: span 2; }
+.board .side { display: grid; gap: 18px; align-content: start; grid-row: span 2; min-width: 0; }
+.swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.sw { display: grid; gap: 4px; min-width: 0; }
+.sw button {
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.12);
+  cursor: pointer;
+  padding: 0;
+}
+.sw button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.sw span { font-size: 0.6875rem; line-height: 1.3; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.words { display: flex; gap: 8px; flex-wrap: wrap; }
+.words span { font-size: 0.8125rem; padding: 3px 10px; border-radius: 999px; }
+.refs { font-size: 0.8125rem; display: grid; gap: 2px; }
+
+/* Direction A */
+.board-a { background: var(--a-oat); color: var(--a-ink); }
+.board-a .img { background: #d9d2c8; color: var(--a-ink); filter: grayscale(1); }
+.board-a .img.plum { background: #cbbfcc; }
+.board-a .tag { color: var(--a-plum); filter: none; }
+.board-a .headline { font-family: "Newsreader", Georgia, serif; font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.15; font-weight: 400; color: var(--a-plum); text-wrap: balance; }
+.board-a .headline em { font-style: italic; }
+.board-a .spec-h { font-family: "Newsreader", Georgia, serif; font-size: 1.5rem; font-weight: 600; }
+.board-a .spec-b { font-family: "Instrument Sans", system-ui, sans-serif; font-size: 0.9375rem; }
+.board-a .words span { background: #e6dccf; color: var(--a-ink); }
+.board-a .meta { color: #5f5850; }
+.board-a .cta { background: var(--a-plum); color: var(--a-oat); }
+
+/* Direction B */
+.board-b { background: var(--b-white); color: var(--b-charcoal); border: 1px solid #e4e0ea; }
+.board-b .img { background: #e3e1e8; color: var(--b-charcoal); }
+.board-b .img.lilac { background: var(--b-lilac); }
+.board-b .tag { color: var(--b-violet); }
+.board-b .headline { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.08; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.board-b .headline mark { background: linear-gradient(transparent 60%, var(--b-apricot) 60%); color: inherit; }
+.board-b .spec-h { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.5rem; font-weight: 700; }
+.board-b .spec-b { font-family: "Figtree", system-ui, sans-serif; font-size: 0.9375rem; }
+.board-b .words span { background: var(--b-lilac); color: var(--b-charcoal); }
+.board-b .meta { color: #5c5866; }
+.board-b .cta { background: var(--b-violet); color: var(--b-white); }
+
+.cta { display: inline-block; justify-self: start; padding: 10px 18px; border-radius: 999px; font-size: 0.875rem; font-weight: 600; }
+.meta { font-size: 0.75rem; }
+
+.dir-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; }
+.why { color: var(--muted); max-width: 68ch; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.quote { font-family: var(--font-head); font-size: 1.25rem; font-style: italic; border-left: 3px solid var(--accent); padding-left: 16px; max-width: 60ch; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  background: var(--fg);
+  color: var(--bg);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 760px) {
+  .diagram { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
+  .z-hero { grid-column: 1 / 3; grid-row: auto; min-height: 120px; }
+  .z-img2, .z-img3 { grid-column: auto; grid-row: auto; min-height: 80px; }
+  .z-head, .z-type, .z-swatch, .z-refs { grid-column: 1 / 3; grid-row: auto; min-height: 56px; }
+  .board { grid-template-columns: 1fr; padding: 16px; }
+  .board .hero { min-height: 260px; grid-row: auto; }
+  .board .col2 { grid-template-columns: 1fr 1fr; grid-row: auto; }
+  .board .side { grid-row: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sw button { transition: transform 0.15s ease; }
+  .sw button:hover { transform: scale(1.04); }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="stack prose">
+    <p class="eyebrow">Carol Fox website redesign · Design phase</p>
+    <h1>Mood board starter</h1>
+    <p class="lead">Two visual directions for Carol to react to, each laid out as a ready-made mood board. Rebuild them in Figma, swap the grey boxes for real images, then send Carol both and ask which feels more like her.</p>
+  </header>
+
+  <section class="stack">
+    <h2>The layout</h2>
+    <p class="prose">Every board uses the same layout, so Carol compares the feeling of each direction rather than the arrangement. One large image sets the mood, two smaller ones add range, and the right-hand column shows how the site would speak and look.</p>
+    <div class="diagram" role="img" aria-label="Mood board layout: a large image on the left, two stacked images in the middle, and a right column with headline, type, colours and references">
+      <div class="zone z-hero"><b>Hero image</b>The single photo that sums up the mood. Usually Carol.</div>
+      <div class="zone z-img2"><b>Image 2</b>A client moment</div>
+      <div class="zone z-img3"><b>Image 3</b>A different age or setting</div>
+      <div class="zone z-head"><b>Sample headline</b>In Carol's voice</div>
+      <div class="zone z-type"><b>Type pairing</b>Headline font and body font</div>
+      <div class="zone z-swatch"><b>Colours</b>5 swatches with hex codes</div>
+      <div class="zone z-refs"><b>Mood words and references</b>3 words, 2 or 3 site screenshots</div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="dir-head">
+      <h2>Direction A: Warm editorial</h2>
+      <p class="eyebrow">Wise · Warm · Unhurried</p>
+    </div>
+    <p class="why">This one leans on Carol's black-and-white photography and 20+ years of experience. A serif headline font and an oat background make it feel like a thoughtful conversation. Plum keeps a link to her current purple.</p>
+
+    <div class="board board-a">
+      <div class="img hero"><span class="tag">Hero</span>Carol, black-and-white portrait, smiling, outdoors. Use one of her existing photos (not the one with Jane).</div>
+      <div class="col2">
+        <div class="img plum"><span class="tag">Image 2</span>Two people talking over coffee, mid-conversation, hands and cups in shot</div>
+        <div class="img"><span class="tag">Image 3</span>Older professional, reflective, by a window</div>
+      </div>
+      <div class="side">
+        <p class="headline">Talk it through over coffee. <em>One conversation</em> might be all you need.</p>
+        <span class="cta">Let's have a coffee</span>
+        <div class="stack-sm">
+          <p class="spec-h">Newsreader for headlines</p>
+          <p class="spec-b">Instrument Sans for body text. Clear and friendly at small sizes, with enough character to sit beside a serif.</p>
+          <p class="meta">Both free on Google Fonts and built into Figma</p>
+        </div>
+        <div class="swatches" data-board="a">
+          <div class="sw"><button type="button" style="background:#f3eee6" data-hex="#F3EEE6" aria-label="Copy Oat #F3EEE6"></button><span>Oat<br>#F3EEE6</span></div>
+          <div class="sw"><button type="button" style="background:#24202a" data-hex="#24202A" aria-label="Copy Ink #24202A"></button><span>Ink<br>#24202A</span></div>
+          <div class="sw"><button type="button" style="background:#5b2a55" data-hex="#5B2A55" aria-label="Copy Plum #5B2A55"></button><span>Plum<br>#5B2A55</span></div>
+          <div class="sw"><button type="button" style="background:#b9a3bd" data-hex="#B9A3BD" aria-label="Copy Heather #B9A3BD"></button><span>Heather<br>#B9A3BD</span></div>
+          <div class="sw"><button type="button" style="background:#8a8178" data-hex="#8A8178" aria-label="Copy Stone #8A8178"></button><span>Stone<br>#8A8178</span></div>
+        </div>
+        <div class="words"><span>Wise</span><span>Warm</span><span>Unhurried</span></div>
+        <div class="refs meta">
+          <span>References to screenshot:</span>
+          <span>Darleen Davies (coffee imagery), Hannah Salton (personal tone)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="dir-head">
+      <h2>Direction B: Modern confident</h2>
+      <p class="eyebrow">Sharp · Energising · Direct</p>
+    </div>
+    <p class="why">This one leans on "incisive and quick". White space, a bold grotesque headline font and a brighter violet feel current and energetic, which may appeal more to younger visitors. Apricot adds warmth, so it doesn't turn corporate.</p>
+
+    <div class="board board-b">
+      <div class="img hero lilac"><span class="tag">Hero</span>Carol, close crop, looking at the camera, natural light. Colour or black and white.</div>
+      <div class="col2">
+        <div class="img"><span class="tag">Image 2</span>Young professional in their first job, confident, city setting</div>
+        <div class="img lilac"><span class="tag">Image 3</span>Senior leader in a relaxed one-to-one, laughing</div>
+      </div>
+      <div class="side">
+        <p class="headline">From your first job to the boardroom. <mark>Let's work out what's next.</mark></p>
+        <span class="cta">Start with a conversation</span>
+        <div class="stack-sm">
+          <p class="spec-h">Bricolage Grotesque for headlines</p>
+          <p class="spec-b">Figtree for body text. Rounded, modern and very readable, softening the bold headlines.</p>
+          <p class="meta">Both free on Google Fonts and built into Figma</p>
+        </div>
+        <div class="swatches" data-board="b">
+          <div class="sw"><button type="button" style="background:#ffffff" data-hex="#FFFFFF" aria-label="Copy White #FFFFFF"></button><span>White<br>#FFFFFF</span></div>
+          <div class="sw"><button type="button" style="background:#1c1b22" data-hex="#1C1B22" aria-label="Copy Charcoal #1C1B22"></button><span>Charcoal<br>#1C1B22</span></div>
+          <div class="sw"><button type="button" style="background:#6b3fa0" data-hex="#6B3FA0" aria-label="Copy Violet #6B3FA0"></button><span>Violet<br>#6B3FA0</span></div>
+          <div class="sw"><button type="button" style="background:#e9e1f4" data-hex="#E9E1F4" aria-label="Copy Lilac #E9E1F4"></button><span>Lilac<br>#E9E1F4</span></div>
+          <div class="sw"><button type="button" style="background:#f2b880" data-hex="#F2B880" aria-label="Copy Apricot #F2B880"></button><span>Apricot<br>#F2B880</span></div>
+        </div>
+        <div class="words"><span>Sharp</span><span>Energising</span><span>Direct</span></div>
+        <div class="refs meta">
+          <span>References to screenshot:</span>
+          <span>Sue Belton (paths by career stage), Dave Bailey (single-page layout)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Build it in Figma</h2>
+    <ol class="steps">
+      <li><b>Create the file.</b> In Figma, choose New design file and name it "Carol Fox mood boards". This uses one of your three free files.</li>
+      <li><b>Add two frames.</b> Press <kbd>F</kbd>, then drag out a frame and set its size to 1920 × 1080 in the right-hand panel. Name it "A: Warm editorial". Duplicate it with <kbd>⌘</kbd> <kbd>D</kbd>, move it to the right and rename it "B: Modern confident".</li>
+      <li><b>Add a grid to help you line things up.</b> Select a frame, then in the right-hand panel add a layout guide with 12 columns, a 64 px margin and a 24 px gutter. The hero takes 5 columns, the middle images 3, and the right column 4.</li>
+      <li><b>Drop in the images.</b> Drag photos straight from Finder onto the frame. Draw a rectangle (<kbd>R</kbd>) for each zone first, then drag the image onto the rectangle so it fills and crops automatically. Double-click the image to adjust the crop.</li>
+      <li><b>Add the colours.</b> Draw five 120 × 120 squares, paste each hex code from this page into the Fill field (click a swatch here to copy it), and add a small text label underneath with <kbd>T</kbd>.</li>
+      <li><b>Add the type and words.</b> Type the sample headline and set the font from the text panel. Google Fonts are built in, so search "Newsreader" or "Bricolage Grotesque". Add the three mood words and a button shape with the call to action.</li>
+      <li><b>Keep it consistent.</b> Same layout, same number of images, and the same spacing on both boards. If Direction A's images are black and white, make all of them black and white.</li>
+      <li><b>Export and save.</b> Select each frame and add an export in the bottom of the right-hand panel: PNG at 2×. Save the files to <code>design/mood-boards/</code> in the repo, and add a line to the design log.</li>
+    </ol>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Finding images</h3>
+      <p class="why">Unsplash and Pexels are free, with no attribution needed. Try these searches:</p>
+      <ul>
+        <li>"two women coffee conversation"</li>
+        <li>"mentor young professional"</li>
+        <li>"older woman portrait black and white"</li>
+        <li>"graduate first job office"</li>
+        <li>"business meeting relaxed laughing"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Using Carol's photos</h3>
+      <ul>
+        <li>Use her existing black-and-white portraits for the hero.</li>
+        <li>Leave out the old home page photo with Jane.</li>
+        <li>The photo with Alfie is optional. He has passed away, so check with Carol before using it.</li>
+        <li>Mix ages across the board so every visitor sees someone like them.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Keep it light</h3>
+      <ul>
+        <li>8 to 10 images per board at most.</li>
+        <li>Aim for 1 to 2 hours in total. The aim is a quick reaction from Carol, not a final design.</li>
+        <li>Screenshot your boards as you go for the case study.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>What to send Carol</h2>
+    <p class="why prose">Send both boards side by side, with one short message:</p>
+    <p class="quote">"Here are two directions for the new site. Which one feels more like you, and is there anything you'd change?"</p>
+    <p class="why prose">Her answer, and the reasons she gives, go straight into the design log. That's the evidence your case study needs for why the final design looks the way it does.</p>
+  </section>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+  var toast = document.getElementById('toast');
+  var timer;
+  function show(msg) {
+    toast.textContent = msg;
+    toast.hidden = false;
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.hidden = true; }, 1600);
+  }
+  document.querySelectorAll('.sw button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var hex = btn.getAttribute('data-hex');
+      var done = function () { show('Copied ' + hex); };
+      var fail = function () { show(hex + ': copy it from the label'); };
+      try {
+        navigator.clipboard.writeText(hex).then(done, fail);
+      } catch (e) { fail(); }
+    });
+  });
+})();
+</script>

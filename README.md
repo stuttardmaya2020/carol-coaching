@@ -10,6 +10,7 @@ A redesign of Carol Fox's coaching website, run as a lean user-centred design pr
 ## Key documents
 
 - [Project brief, UCD plan, Define work and current-site audit](https://claude.ai/artifact/SXu2yaeGmUXV8yNS8J3Ypw) (Claude Doc)
+- [Mood board starter](https://claude.ai/artifact/D3HBojfWqogqVy3MDMpVvf): two directions and a Figma guide (source in `design/mood-boards/mood-board-starter.html`)
 - Figma mood boards: _link to add_
 - Figma wireframes: _link to add_
 - Preview site (GitHub Pages): _link to add_
