@@ -1,5 +1,3 @@
-import Photo from './Photo.jsx'
-import handDetail from '../assets/carol-hand-detail.jpg'
 import './WillCoachingHelp.css'
 
 // Carol's questions from the old home page, in a half-and-half split.
@@ -31,11 +29,6 @@ function WillCoachingHelp() {
         </ul>
       </div>
       <div className="will-panel on-violet">
-        <Photo
-          className="will-photo"
-          src={handDetail}
-          alt="Close-up of Carol’s hand and wristwatch, in black and white"
-        />
         <p className="will-ambition">
           My ambition as a coach is for you to be the best you can possibly be.
         </p>

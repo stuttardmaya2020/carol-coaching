@@ -7,11 +7,11 @@
 
 .hero-copy {
   grid-row: 2;
-  padding: var(--space-4) var(--space-3) var(--space-6);
+  padding: var(--space-3) var(--space-3) var(--space-6);
 }
 
 .hero-title {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
   font-size: var(--text-display);
 }
 
@@ -29,7 +29,7 @@
 .hero-photo-carol {
   grid-row: 1;
   justify-self: end;
-  width: 64%;
+  width: 46%; /* small on phones, so the button is on the first screen */
   max-width: var(--photo-small);
   aspect-ratio: 1;
   object-position: 60% 50%;
@@ -47,11 +47,15 @@
   object-position: 50% 100%; /* keeps the table and cups, trims the blank wall */
 }
 
-/* Desktop: the line lines up with the header on the left, Carol runs off
-   the right edge, and the cups sit off-centre below the line. */
-@media (min-width: 64rem) {
+/* Desktop, and phones held sideways: the line lines up with the header on the
+   left, Carol runs off the right edge, and the cups sit off-centre below. */
+@media (min-width: 64rem), (min-width: 40rem) and (max-height: 30rem) {
   .hero {
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-4);
   }
 
   .hero-copy {

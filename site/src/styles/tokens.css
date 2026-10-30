@@ -31,7 +31,7 @@
   --text-2xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);    /* accordion rows, the word band: 28px to 40px */
   --text-quote: clamp(1.5rem, 1.25rem + 1.1vw, 2.25rem); /* pull quotes: 24px to 36px */
   --text-heading: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);/* section headings: 36px to 56px */
-  --text-display: clamp(2.75rem, 1rem + 4vw, 5rem);      /* hero and closing line: 44px to 80px */
+  --text-display: clamp(2.5rem, 1rem + 4vw, 5rem);       /* hero and closing line: 40px to 80px */
   --text-title: clamp(4rem, 1.5rem + 9vw, 7.5rem);       /* "Meet Carol": 64px to 120px */
 
   --weight-regular: 400;
