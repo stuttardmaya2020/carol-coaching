@@ -29,24 +29,17 @@
 
 .will-panel {
   display: grid;
-  gap: var(--space-4);
-  justify-items: center;
   align-content: center;
   padding: var(--space-8) var(--space-3);
   background: var(--color-deep);
 }
 
-.will-photo {
-  max-width: var(--photo-small);
-  aspect-ratio: 1;
-}
-
 .will-ambition {
-  max-width: 18em;
+  max-width: 12em;
   font-family: var(--font-display);
-  font-size: var(--text-quote);
-  line-height: var(--leading-quote);
-  text-align: center;
+  font-size: var(--text-heading);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
   text-wrap: balance;
 }
 
@@ -58,5 +51,9 @@
 
   .will-copy {
     padding: var(--space-12) var(--space-8) var(--space-12) var(--page-edge);
+  }
+
+  .will-panel {
+    padding: var(--space-8);
   }
 }

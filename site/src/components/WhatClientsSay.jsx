@@ -49,7 +49,7 @@ function WhatClientsSay() {
           aria-controls="all-testimonials"
           onClick={() => setShowAll(!showAll)}
         >
-          {showAll ? 'Show fewer' : `Read what all ${testimonials.length} clients said`}
+          {showAll ? 'Show fewer' : 'Read what clients say'}
         </button>
 
         <div id="all-testimonials" className="clients-all" hidden={!showAll}>

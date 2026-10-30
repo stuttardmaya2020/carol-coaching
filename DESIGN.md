@@ -20,7 +20,7 @@ typography:
     lineHeight: 1.05
   display:
     fontFamily: "Newsreader, Georgia, Times New Roman, serif"
-    fontSize: "clamp(2.75rem, 1rem + 4vw, 5rem)"
+    fontSize: "clamp(2.5rem, 1rem + 4vw, 5rem)"
     fontWeight: 400
     lineHeight: 1.05
   heading:
@@ -81,7 +81,7 @@ Tokens live in `site/src/styles/tokens.css`. Always use the tokens, never raw he
 
 ## Direction
 
-Reworked 2026-10-30 after Maya's review: one theme, violet and cream, leaning on Ref 2 in `design/references/` (violet where it uses red). From Ref 2: headlines in the accent colour on cream, full-width colour bands, an accordion in a band, a half-and-half split panel, and two narrow columns of text set off to one side. From Ref 1: black-and-white photos crossing section edges, and detail crops.
+Reworked 2026-10-30 after Maya's review: one theme, violet and cream, leaning on Ref 2 in `design/references/` (violet where it uses red). From Ref 2: headlines in the accent colour on cream, full-width colour bands, an accordion in a band, a half-and-half split panel, and two narrow columns of text set off to one side. From Ref 1: black-and-white photos crossing section edges.
 
 To keep it from looking machine-made, spend the page on real things: Carol's photos at a generous size, her own words, and uneven layouts. Don't add decoration to make up for missing content.
 
@@ -133,7 +133,7 @@ Add `.on-violet` to any violet or deep violet section; it turns headlines, links
 
 ## Imagery
 
-- Carol's own black-and-white photos are the strongest asset. Lead with them, and use detail crops to get more from each one.
+- Carol's own black-and-white photos are the strongest asset. Lead with them, whole. Don't use close-up crops of hands or objects: Maya found the watch crop looked odd.
 - Originals are in `design/photos/`, with web-sized copies in `site/src/assets/`. Never use the photo with Jane or the smiling crop from the old banner. Crop out invented details in generated images, such as business names.
 - Generated images may show places and objects only. Never generate Carol or anyone presented as a client, because a referred visitor would take them as real.
 - Where no photo exists, use the grey placeholder, labelled "Photo needed: …".
@@ -154,7 +154,7 @@ Addresses use a hash (`#/about`), so GitHub Pages needs no set-up. Every page en
 - **Photo:** given `src` and `alt`, an image that fills whatever size its section gives it. Without them, a grey placeholder. Lazy-loaded unless `loading="eager"` is passed.
 - **Hero:** each sentence on a new line, the primary button, a short note in Carol's words, then Carol's photo running off the right edge and the cups crossing into the violet band.
 - **Accordion:** rows on a violet band, one open at a time, all closed to start. The words Open and Close signal the action, not an icon. Used for Who I help (with a "who it's for" subtitle) and the six coaching areas.
-- **Will coaching help me?:** a split: Carol's questions on cream, with a detail photo and her ambition on deep violet.
+- **Will coaching help me?:** a split: Carol's questions on cream, with her ambition line, large, on deep violet.
 - **What clients say:** a violet band, with three short highlights, stepped across the page, then a button that reveals all 11 in full. Text is copied exactly from `testimonials.js`.
 - **Pull quote:** one short quote on a page.
 - **Meet Carol:** the title at `--text-title`, a short bio, a link to About, and a photo crossing into the Invitation.
