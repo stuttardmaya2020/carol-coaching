@@ -1,0 +1,79 @@
+/* Phones: Carol to the right, then the line and the button,
+   then the cups to the left, crossing into the next section. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-copy {
+  grid-row: 2;
+  padding: var(--space-4) var(--space-3) var(--space-6);
+}
+
+.hero-title {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-display);
+}
+
+.hero-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.hero-note {
+  font-size: var(--text-lg);
+}
+
+.hero-photo-carol {
+  grid-row: 1;
+  justify-self: end;
+  width: 64%;
+  max-width: var(--photo-small);
+  aspect-ratio: 1;
+  object-position: 60% 50%;
+}
+
+.hero-photo-coffee {
+  grid-row: 3;
+  justify-self: start;
+  position: relative; /* sits above the violet band */
+  z-index: 1;
+  width: 88%;
+  max-width: var(--photo-wide);
+  margin-bottom: calc(var(--overlap) * -1);
+  aspect-ratio: 2 / 1;
+  object-position: 50% 100%; /* keeps the table and cups, trims the blank wall */
+}
+
+/* Desktop: the line lines up with the header on the left, Carol runs off
+   the right edge, and the cups sit off-centre below the line. */
+@media (min-width: 64rem) {
+  .hero {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    padding: var(--space-8) var(--space-6) var(--space-6) var(--page-edge);
+  }
+
+  .hero-photo-carol {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+    width: 100%;
+    max-width: var(--photo-large);
+    aspect-ratio: 4 / 5;
+  }
+
+  .hero-photo-coffee {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    width: 72%;
+    margin-right: var(--space-6);
+  }
+}

@@ -1,0 +1,106 @@
+.clients {
+  background: var(--color-primary);
+  padding-block: var(--space-12);
+}
+
+.clients-title {
+  margin-bottom: var(--space-8);
+  font-size: var(--text-heading);
+}
+
+.quote {
+  margin: 0 0 var(--space-8);
+  max-width: var(--quote-width);
+}
+
+.quote blockquote {
+  margin: 0 0 var(--space-2);
+}
+
+/* Regular upright type: easier to read at length than light italics. */
+.quote p {
+  max-width: none;
+  font-family: var(--font-display);
+  font-size: var(--text-quote);
+  line-height: var(--leading-quote);
+  quotes: "“" "”";
+}
+
+.quote p::before {
+  content: open-quote;
+}
+
+.quote p::after {
+  content: close-quote;
+}
+
+.quote figcaption {
+  color: var(--color-text-on-violet);
+  text-wrap: pretty;
+}
+
+.quote strong {
+  color: var(--color-cream);
+  font-weight: var(--weight-bold);
+}
+
+.clients-toggle {
+  min-height: var(--tap-target);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--text-lg);
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.clients-toggle:hover {
+  text-decoration-thickness: 2px;
+}
+
+.clients-all {
+  margin-top: var(--space-6);
+}
+
+.clients-all:not([hidden]) {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.testimonial {
+  margin: 0;
+  padding-top: var(--space-3);
+  border-top: var(--rule-width) solid var(--color-rule-on-violet);
+}
+
+.testimonial blockquote {
+  margin: 0 0 var(--space-2);
+}
+
+.testimonial strong {
+  font-weight: var(--weight-bold);
+}
+
+.testimonial figcaption {
+  color: var(--color-text-on-violet);
+}
+
+/* The quotes step across the page instead of lining up. */
+@media (min-width: 56rem) {
+  .quote:nth-of-type(2) {
+    margin-left: auto;
+  }
+
+  .quote:nth-of-type(3) {
+    margin-left: var(--space-12);
+  }
+
+  .clients-all:not([hidden]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-8);
+  }
+}

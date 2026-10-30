@@ -1,0 +1,62 @@
+.will-copy {
+  padding: var(--space-12) var(--space-3);
+}
+
+.will-title {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-heading);
+}
+
+.will-intro {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+.will-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.will-list li {
+  padding-block: var(--space-2);
+  border-top: var(--rule-width) solid var(--color-rule);
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: var(--leading-label);
+}
+
+.will-panel {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  align-content: center;
+  padding: var(--space-8) var(--space-3);
+  background: var(--color-deep);
+}
+
+.will-photo {
+  max-width: var(--photo-small);
+  aspect-ratio: 1;
+}
+
+.will-ambition {
+  max-width: 18em;
+  font-family: var(--font-display);
+  font-size: var(--text-quote);
+  line-height: var(--leading-quote);
+  text-align: center;
+  text-wrap: balance;
+}
+
+@media (min-width: 56rem) {
+  .will {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+
+  .will-copy {
+    padding: var(--space-12) var(--space-8) var(--space-12) var(--page-edge);
+  }
+}

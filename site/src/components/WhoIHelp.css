@@ -1,0 +1,23 @@
+/* The band leaves room at the top for the hero photo crossing into it. */
+.who {
+  background: var(--color-primary);
+  padding-block: calc(var(--overlap) + var(--space-6)) var(--space-8);
+}
+
+.who-title {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-heading);
+}
+
+@media (min-width: 56rem) {
+  .who-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .who-title {
+    margin-bottom: 0;
+  }
+}

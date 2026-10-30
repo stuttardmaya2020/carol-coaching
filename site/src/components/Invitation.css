@@ -1,28 +1,12 @@
 .invitation {
-  padding-block: var(--space-12);
-  background: var(--color-primary-dark);
-  color: var(--color-bg);
-  scroll-margin-top: var(--space-4);
-}
-
-.invitation-inner {
-  display: grid;
-  gap: var(--space-4);
+  background: var(--color-deep);
+  padding-block: calc(var(--overlap) + var(--space-8)) var(--space-8);
 }
 
 .invitation-title {
-  font-size: var(--text-3xl);
-}
-
-/* On the dark violet, the key phrase stays white and relies on the italic. */
-.invitation-title em {
-  color: inherit;
-}
-
-.invitation-text {
-  max-width: 44ch;
-  font-size: var(--text-lg);
-  color: var(--color-surface);
+  max-width: 14em;
+  margin-bottom: var(--space-6);
+  font-size: var(--text-display);
 }
 
 .invitation-actions {
@@ -30,22 +14,11 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2) var(--space-4);
-  margin-top: var(--space-2);
 }
 
-/* The letter's sign-off again, so the page ends as it began. */
-.invitation-signature {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--text-2xl);
-  line-height: 1;
-}
-
-.invitation-actions a:not(.button) {
-  color: var(--color-bg);
-  font-weight: 600;
-}
-
-.invitation :focus-visible {
-  outline-color: var(--color-bg);
+.invitation-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  font-size: var(--text-lg);
 }

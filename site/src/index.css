@@ -18,33 +18,42 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-cream);
+  color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--leading-body);
 }
 
 ::selection {
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: var(--color-primary);
+  color: var(--color-cream);
 }
 
+main:focus {
+  outline: none; /* main only takes focus when a new page opens */
+}
+
+/* Headlines are violet on cream, with italic for the words that matter. */
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  line-height: var(--leading-tight);
-  text-wrap: balance;
   margin: 0;
+  color: var(--heading-color, var(--color-primary));
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
 }
 
-/* Italic violet marks the key phrase in a heading (see DESIGN.md). */
-h1 em,
-h2 em,
-h3 em {
-  color: var(--color-primary);
+/* One sentence per line in a big headline, and keeps an italic phrase whole. */
+.line {
+  display: block;
+}
+
+.line em {
+  white-space: nowrap;
 }
 
 p {
@@ -55,7 +64,7 @@ p {
 
 a {
   color: var(--color-primary);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: var(--rule-width);
   text-underline-offset: 0.2em;
 }
 
@@ -70,8 +79,8 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 3px;
+  outline: var(--focus-width) solid var(--focus-color, var(--color-primary));
+  outline-offset: var(--focus-width);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -97,16 +106,42 @@ img {
   }
 }
 
+/* Add to any section with a violet background. The variables change for
+   everything inside it: cream headlines, cream focus ring. */
+.on-violet {
+  --heading-color: var(--color-cream);
+  --focus-color: var(--color-cream);
+  color: var(--color-cream);
+}
+
+.on-violet a,
+.on-violet a:hover {
+  color: inherit;
+}
+
+/* A quieter way to act: underlined text at a comfortable size. */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  font-size: var(--text-lg);
+}
+
 /* Hidden until a keyboard user tabs to it. */
 .skip-link {
   position: absolute;
   left: var(--space-2);
   top: var(--space-2);
-  z-index: 1;
+  z-index: 2;
   padding: var(--space-1) var(--space-2);
-  background: var(--color-bg);
+  background: var(--color-primary);
   border-radius: var(--radius-sm);
+  color: var(--color-cream);
   transform: translateY(-200%);
+}
+
+.skip-link:hover {
+  color: var(--color-cream);
 }
 
 .skip-link:focus {

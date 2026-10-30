@@ -1,0 +1,152 @@
+/* Shared by About, How I work and Get in touch. */
+.page-intro {
+  padding-block: var(--space-8) var(--space-6);
+}
+
+.page-title {
+  max-width: 16em;
+  margin-bottom: var(--space-4);
+  font-size: var(--text-display);
+}
+
+.page-heading {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-heading);
+}
+
+.page-section {
+  padding-block: var(--space-12);
+}
+
+/* Text in two narrow columns, set beside each other. */
+.page-columns {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 48rem) {
+  .page-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4) var(--space-8);
+    max-width: var(--quote-width);
+    margin-left: auto;
+  }
+}
+
+.page-stack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.page-stack .page-heading {
+  margin-bottom: var(--space-1);
+}
+
+.page-question {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+}
+
+.page-question h3 {
+  font-size: var(--text-xl);
+}
+
+.page-wide-photo {
+  width: 92%;
+  max-height: 38rem;
+  aspect-ratio: 2 / 1;
+  object-position: 50% 100%;
+}
+
+.page-wide-photo-crossing {
+  position: relative; /* sits above the section below */
+  z-index: 1;
+  margin-bottom: calc(var(--overlap) * -1);
+}
+
+/* A full-width violet band, with the heading beside the content. */
+.page-band {
+  background: var(--color-primary);
+  padding-block: var(--space-12);
+}
+
+.page-band-inner {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.page-band-note {
+  color: var(--color-text-on-violet);
+}
+
+@media (min-width: 56rem) {
+  .page-band-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: var(--space-8);
+  }
+}
+
+.question-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.question-list li {
+  padding-block: var(--space-1);
+}
+
+.question-list li + li {
+  border-top: var(--rule-width) solid var(--color-rule-on-violet);
+}
+
+/* About: the headline to the left, Carol running off the right edge. */
+.about-intro {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.about-intro-copy {
+  padding: var(--space-6) var(--space-3) 0;
+}
+
+.about-intro-photo {
+  justify-self: end;
+  width: 86%;
+  max-width: var(--photo-large);
+  aspect-ratio: 1;
+  object-position: 60% 50%;
+}
+
+.about-development {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-12);
+}
+
+.about-development-photo {
+  aspect-ratio: 5 / 4;
+}
+
+@media (min-width: 64rem) {
+  .about-intro {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .about-intro-copy {
+    padding: var(--space-8) var(--space-6) var(--space-8) var(--page-edge);
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+  }
+
+  .about-development {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: var(--space-8);
+    align-items: center;
+  }
+}
