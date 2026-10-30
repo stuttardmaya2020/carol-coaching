@@ -1,55 +1,45 @@
 ---
 name: Carol Fox Coaching
-description: A short, signed letter from a London life and business coach.
+description: Violet and cream, with black-and-white photos crossing bold full-width bands.
 colors:
-  bg: "#ffffff"
-  text: "#1c1b22"
-  text-muted: "#5c5866"
+  cream: "#f6f0e4"
   primary: "#6b3fa0"
   primary-dark: "#54307f"
-  surface: "#e9e1f4"
-  highlight: "#f2b880"
-  border: "#e4e0ea"
+  deep: "#38205c"
+  ink: "#2b1a40"
+  text-muted: "#5f4f73"
+  text-on-violet: "#e6dcf2"
+  rule: "#cbbfd9"
+  rule-on-violet: "#b9a3d4"
   placeholder: "#6e6a75"
 typography:
-  display:
-    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
-    fontSize: "clamp(2.5rem, 6vw, 4rem)"
-    fontWeight: 400
-    lineHeight: 1.1
-  letter:
-    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
-    fontSize: "clamp(1.375rem, 1rem + 1.4vw, 1.875rem)"
-    fontWeight: 400
-    lineHeight: 1.35
-  headline:
-    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
-    fontSize: "clamp(1.75rem, 1.2rem + 2vw, 2.5rem)"
-    fontWeight: 400
-    lineHeight: 1.1
   title:
     fontFamily: "Newsreader, Georgia, Times New Roman, serif"
-    fontSize: "1.75rem"
+    fontSize: "clamp(4rem, 1.5rem + 9vw, 7.5rem)"
     fontWeight: 400
-    lineHeight: 1.1
-  body-large:
-    fontFamily: "Instrument Sans, system-ui, sans-serif"
-    fontSize: "1.25rem"
+    lineHeight: 1.05
+  display:
+    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
+    fontSize: "clamp(2.75rem, 1rem + 4vw, 5rem)"
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: 1.05
+  heading:
+    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
+    fontSize: "clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem)"
+    fontWeight: 400
+    lineHeight: 1.05
+  quote:
+    fontFamily: "Newsreader, Georgia, Times New Roman, serif"
+    fontSize: "clamp(1.5rem, 1.25rem + 1.1vw, 2.25rem)"
+    fontWeight: 400
+    lineHeight: 1.3
   body:
     fontFamily: "Instrument Sans, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
-  label:
-    fontFamily: "Instrument Sans, system-ui, sans-serif"
-    fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: 1.6
 rounded:
   sm: "6px"
-  md: "12px"
   pill: "999px"
 spacing:
   "1": "8px"
@@ -59,43 +49,30 @@ spacing:
   "6": "48px"
   "8": "64px"
   "12": "96px"
+  "16": "128px"
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
-    textColor: "{colors.bg}"
+    textColor: "{colors.cream}"
     rounded: "{rounded.pill}"
     padding: "8px 32px"
     height: "48px"
   button-primary-hover:
     backgroundColor: "{colors.primary-dark}"
-    textColor: "{colors.bg}"
+    textColor: "{colors.cream}"
   button-light:
-    backgroundColor: "{colors.bg}"
-    textColor: "{colors.primary-dark}"
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.deep}"
     rounded: "{rounded.pill}"
     padding: "8px 32px"
     height: "48px"
   button-light-hover:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.primary-dark}"
-  testimonial:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.md}"
-    padding: "32px"
-  portrait-placeholder:
+    backgroundColor: "{colors.text-on-violet}"
+    textColor: "{colors.deep}"
+  photo-placeholder:
     backgroundColor: "{colors.placeholder}"
-    textColor: "{colors.bg}"
-    rounded: "{rounded.md}"
+    textColor: "#ffffff"
     padding: "16px"
-  invitation-band:
-    backgroundColor: "{colors.primary-dark}"
-    textColor: "{colors.bg}"
-    padding: "96px 0"
-  how-band:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text}"
-    padding: "96px 0"
 ---
 
 # Design system: Carol Fox Coaching
@@ -104,82 +81,82 @@ Tokens live in `site/src/styles/tokens.css`. Always use the tokens, never raw he
 
 ## Direction
 
-Chosen 2026-10-28: the fonts from "Warm editorial" with the colours from "Modern confident" (see `design/mood-boards/mood-board-starter.html`). The result should feel warm and experienced in its type, and clean and current in its colour. Think a thoughtful conversation, not a corporate brochure.
+Reworked 2026-10-30 after Maya's review: one theme, violet and cream, leaning on Ref 2 in `design/references/` (violet where it uses red). From Ref 2: headlines in the accent colour on cream, full-width colour bands, an accordion in a band, a half-and-half split panel, and two narrow columns of text set off to one side. From Ref 1: black-and-white photos crossing section edges, and detail crops.
 
-Home reads as a short, signed letter from Carol. The page is mostly white and charcoal, set in a serif at letter size. Colour comes in fields: lilac for quotes and the how-it-works band, deep violet for the close.
+To keep it from looking machine-made, spend the page on real things: Carol's photos at a generous size, her own words, and uneven layouts. Don't add decoration to make up for missing content.
 
 ## Colour
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--color-bg` | #FFFFFF | Page background. Also text on the deep violet close and on placeholders |
-| `--color-text` | #1C1B22 | Body text and headings. Also the thin rules between how-it-works steps |
-| `--color-text-muted` | #5C5866 | Captions, testimonial names, the footer |
-| `--color-primary` | #6B3FA0 | Primary button, links, the italic key phrase in headings, the focus ring |
-| `--color-primary-dark` | #54307F | Hover and pressed states. Also the full-bleed background of the closing invitation, and the text on the light button |
-| `--color-surface` | #E9E1F4 | Lilac: testimonial cards, the how-it-works band, text selection, light button hover. Body text on the deep violet close |
-| `--color-highlight` | #F2B880 | Apricot: only the highlight under a stage heading when it is the jump target |
-| `--color-border` | #E4E0EA | Dividers between sections |
-| `--color-placeholder` | #6E6A75 | Mid grey for photo placeholders, with a white label |
+| `--color-cream` | #F6F0E4 | The page. Text on violet |
+| `--color-primary` | #6B3FA0 | Headlines on cream, full-width bands (Who I help, What clients say), links, the primary button |
+| `--color-primary-dark` | #54307F | Hover, quotes, and Carol's questions on cream |
+| `--color-deep` | #38205C | The split panel, the close, the footer |
+| `--color-ink` | #2B1A40 | Reading text on cream |
+| `--color-text-muted` | #5F4F73 | Quote roles on cream |
+| `--color-text-on-violet` | #E6DCF2 | Secondary text on violet and deep violet |
+| `--color-rule` / `--color-rule-on-violet` | #CBBFD9 / #B9A3D4 | Thin rules |
+| `--color-placeholder` | #6E6A75 | Photos still needed, with a white label |
 
-Use violet sparingly: one main button per screen, and italic violet for the key phrase in a headline. Most of the page is white and charcoal.
+**The One Theme Rule.** Violet and cream, nothing else. No charcoal, grey or white sections, and no second accent. The only grey on the page is in the photos and placeholders.
 
-**The Deep Violet Close.** The invitation that ends a page sits on a full-bleed `--color-primary-dark` band with white text and an italic white "Carol" signature. Its key phrase stays white and relies on the italic alone, because violet on violet would not read. Use the light button there, never the violet one.
-
-**The Apricot Rule.** Apricot is reserved for one job: the highlight that draws under a stage heading when a visitor has jumped to it (`:target`). Never use it for text, backgrounds, buttons or decoration.
+Add `.on-violet` to any violet or deep violet section; it turns headlines, links and the focus ring cream.
 
 ## Type
 
-- **Headlines:** Newsreader, regular weight (400), with italic for emphasis. Large and calm rather than bold.
-- **Body and UI:** Instrument Sans, 400 for text, 600 for buttons, links you act on and the main navigation.
-- Scale: `--text-sm` 14px, `--text-base` 17px, `--text-lg` 20px, `--text-xl` 28px, `--text-2xl` 40px, `--text-3xl` up to 64px for the closing headline.
-- `--text-letter` (22px on phones, 30px on desktop) is Carol's letter: the opening lines of Home, in Newsreader, wrapped like a paragraph.
-- `--text-heading` (28px to 40px) is for section headings.
-- The "Carol" signature is Newsreader italic at `--text-2xl`, set beside the button it signs.
-- Keep running text to about 65 characters wide (`--text-width`). The letter is narrower, about 34 characters.
+- **Headlines:** Newsreader, regular weight, tightly spaced, in violet on cream and cream on violet. Italic picks out the words that matter.
+- **Body and UI:** Instrument Sans, 400 for text, 600 for buttons and client names. Reading text is never below `--text-base`. `--text-sm` is only for placeholder labels.
+- **Quotes:** Newsreader upright at regular weight. Never long passages in light italic, which Maya found hard to read.
+- Keep running text to about 65 characters wide (`--text-width`).
 - Headings use `text-wrap: balance`. Paragraphs use `text-wrap: pretty`.
-
-**The One Phrase Rule.** Each heading has one key phrase in italic. On white it is violet; on deep violet it stays white.
 
 **The No Kicker Rule.** No eyebrow or kicker labels above headings. The heading says it on its own.
 
 ## Shape and spacing
 
-- Spacing in steps of 8px (`--space-1` to `--space-12`). Be generous: white space is part of the calm.
-- Sections get `--space-12` of vertical padding. Stage sections use `--space-8` on phones.
-- Content no wider than `--content-width`. The container's side padding is `--space-3` on phones and `--space-6` from 48rem.
-- Two-column layouts (letter, stages, about) start at 56rem. Below that, everything stacks. The how-it-works steps go to three columns at 48rem.
-- Portraits: `--portrait-small` above the letter on phones, `--portrait-width` beside it on desktop.
-- Buttons are pill-shaped (`--radius-pill`). Cards and portraits use `--radius-md`. Bands are full-bleed with square edges.
-- No drop shadows and no colour gradients. Depth comes from flat colour fields: white, lilac, deep violet.
+- Spacing in steps of 8px (`--space-1` to `--space-16`). Be generous.
+- Content no wider than `--content-width`. Anything you tap is at least `--tap-target` (44px) tall.
+- Photos and bands have square edges. Only buttons are rounded (`--radius-pill`).
+- No cards, drop shadows, gradients or icons.
+
+**The Crossing Rule.** A photo crossing a section edge goes over by `--overlap`, using a negative margin. The neighbouring section adds at least the same padding so its text stays clear.
 
 ## Motion
 
-- `--ease-out` (fast start, gentle stop) for all transitions. `--duration-slow` for the apricot highlight drawing in.
-- Anchor links scroll smoothly, but only when the visitor has not asked for reduced motion. With reduced motion, transitions are instant.
+- `--ease-out` for all transitions, `--duration-fast` for hovers.
 
 ## Focus and selection
 
-- Focus ring: 3px `--color-primary` outline, 3px offset. On the deep violet close it turns white.
-- Selected text: lilac background, charcoal text.
+- Focus ring: 3px outline, 3px offset. Violet on cream, cream on violet.
+- Selected text: violet background, cream text.
 
 ## Imagery
 
-- Carol's own black-and-white portraits are the strongest asset. Lead with them.
-- Real photos live in `site/src/assets/` with their origin embedded in the file. The letter uses `carol-portrait.png`. Where no photo exists yet, use the labelled placeholder.
-- Supporting photos show real conversations and people of mixed ages. Avoid generic stock metaphors (ladders, jumping dancers, handshakes).
+- Carol's own black-and-white photos are the strongest asset. Lead with them, and use detail crops to get more from each one.
+- Originals are in `design/photos/`, with web-sized copies in `site/src/assets/`. Never use the photo with Jane or the smiling crop from the old banner. Crop out invented details in generated images, such as business names.
+- Generated images may show places and objects only. Never generate Carol or anyone presented as a client, because a referred visitor would take them as real.
+- Where no photo exists, use the grey placeholder, labelled "Photo needed: …".
+
+## Pages
+
+Addresses use a hash (`#/about`), so GitHub Pages needs no set-up. Every page ends with the Invitation.
+
+- **Home:** Hero, Who I help, Will coaching help me?, How I work, What clients say, Meet Carol, Invitation.
+- **How I work:** the first coffee, what coaching is, six coaching areas in an accordion, questions people ask.
+- **About Carol:** her background, style and development.
+- **Get in touch:** how to reach her, then the Invitation.
 
 ## Components
 
-- **Button:** a pill link, at least 48px tall, Instrument Sans 600. Two variants:
-  - **Primary:** violet with white text, darker violet on hover. For example "Let's have a coffee". One per screen.
-  - **Light:** white with deep violet text, lilac on hover. Only on the deep violet close.
-- **Secondary link:** violet text link with a 1px underline, 2px and darker on hover.
-- **Letter:** the first screen. Portrait and caption, the letter in `--text-letter`, a muted "Where would you like to start?", three "If you're…" links, then the italic "Carol" signature beside the one primary button, with a short no-obligation note below.
-- **Stage:** one section per career stage, with a border on top. The heading repeats the "If you're…" line and ends with a run-on comma, so the body reads as the rest of the sentence. Heading on the left, body and testimonial on the right from 56rem. The apricot highlight draws under the heading when it is the jump target.
-- **Testimonial:** a lilac card (`--radius-md`, `--space-4` padding). The quote is in Newsreader italic with curly quotes added by the style, then name and role in Instrument Sans, small and muted. Quotes are copied exactly; "…" marks a shortened quote.
-- **How it works:** a full-bleed lilac band. Three steps in order, each topped by a thin charcoal rule. No prices or session lengths.
-- **About Carol:** portrait and text side by side from 56rem. The recognition line sits under a border in Newsreader at `--text-xl`.
-- **Invitation:** the deep violet close that ends every page. Headline at `--text-3xl`, lilac body text, then the signature, the light button and a phone link.
-- **Portrait:** given `src` and `alt`, a square black-and-white photo (`object-fit: cover`). Without one, a 4:5 mid-grey placeholder with a white label in the bottom corner. Screen readers hear "Placeholder: …".
-- **Section:** generous vertical padding (`--space-12`), and content no wider than `--content-width`.
+- **Button:** a pill link, at least 48px tall. One per screen. **Primary** on cream, **light** on violet.
+- **Text link:** `.text-link`, underlined at `--text-lg`, leading to a page with more.
+- **Photo:** given `src` and `alt`, an image that fills whatever size its section gives it. Without them, a grey placeholder. Lazy-loaded unless `loading="eager"` is passed.
+- **Hero:** each sentence on a new line, the primary button, a short note in Carol's words, then Carol's photo running off the right edge and the cups crossing into the violet band.
+- **Accordion:** rows on a violet band, one open at a time, all closed to start. The words Open and Close signal the action, not an icon. Used for Who I help (with a "who it's for" subtitle) and the six coaching areas.
+- **Will coaching help me?:** a split: Carol's questions on cream, with a detail photo and her ambition on deep violet.
+- **What clients say:** a violet band, with three short highlights, stepped across the page, then a button that reveals all 11 in full. Text is copied exactly from `testimonials.js`.
+- **Pull quote:** one short quote on a page.
+- **Meet Carol:** the title at `--text-title`, a short bio, a link to About, and a photo crossing into the Invitation.
+- **Invitation:** the deep violet close on every page: each sentence on a new line, the light button, email and phone.
+- **Page columns:** `.page-columns`, two narrow columns of text pushed to the right from 48rem, as in Ref 2.
