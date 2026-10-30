@@ -10,32 +10,67 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-cream);
+  color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--leading-body);
 }
 
+::selection {
+  background: var(--color-primary);
+  color: var(--color-cream);
+}
+
+main:focus {
+  outline: none; /* main only takes focus when a new page opens */
+}
+
+/* Headlines are violet on cream, with italic for the words that matter. */
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  line-height: var(--leading-tight);
-  text-wrap: balance;
   margin: 0;
+  color: var(--heading-color, var(--color-primary));
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+/* One sentence per line in a big headline, and keeps an italic phrase whole. */
+.line {
+  display: block;
+}
+
+.line em {
+  white-space: nowrap;
 }
 
 p {
   margin: 0;
   max-width: var(--text-width);
+  text-wrap: pretty; /* avoids a single word alone on the last line */
 }
 
 a {
   color: var(--color-primary);
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration-thickness: 2px;
 }
 
 img {
@@ -44,8 +79,8 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 3px;
+  outline: var(--focus-width) solid var(--focus-color, var(--color-primary));
+  outline-offset: var(--focus-width);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -54,45 +89,61 @@ img {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 }
 
-/* Placeholder page styles. Delete these when the real home page is built. */
-.placeholder {
+/* Centres a section's content and keeps it off the screen edges. */
+.container {
   max-width: var(--content-width);
-  margin: 0 auto;
-  padding: var(--space-12) var(--space-3);
-  display: grid;
-  gap: var(--space-3);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
 }
 
-.placeholder-eyebrow {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
+@media (min-width: 48rem) {
+  .container {
+    padding-inline: var(--space-6);
+  }
 }
 
-.placeholder h1 {
-  font-size: var(--text-3xl);
-  max-width: 18ch;
+/* Add to any section with a violet background. The variables change for
+   everything inside it: cream headlines, cream focus ring. */
+.on-violet {
+  --heading-color: var(--color-cream);
+  --focus-color: var(--color-cream);
+  color: var(--color-cream);
 }
 
-.placeholder h1 em {
-  color: var(--color-primary);
+.on-violet a,
+.on-violet a:hover {
+  color: inherit;
 }
 
-.placeholder-button {
-  justify-self: start;
+/* A quieter way to act: underlined text at a comfortable size. */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  font-size: var(--text-lg);
+}
+
+/* Hidden until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  z-index: 2;
+  padding: var(--space-1) var(--space-2);
   background: var(--color-primary);
-  color: var(--color-bg);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  text-decoration: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-cream);
+  transform: translateY(-200%);
 }
 
-.placeholder-button:hover {
-  background: var(--color-primary-dark);
+.skip-link:hover {
+  color: var(--color-cream);
+}
+
+.skip-link:focus {
+  transform: none;
 }

@@ -1,0 +1,47 @@
+.meet {
+  padding-top: var(--space-12);
+}
+
+.meet-title {
+  margin-bottom: var(--space-6);
+  font-size: var(--text-title);
+}
+
+.meet-bio {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-lg);
+}
+
+.meet-photo {
+  position: relative; /* sits above the dark section below */
+  z-index: 1;
+  width: 86%;
+  margin-left: auto;
+  margin-bottom: calc(var(--overlap) * -1);
+  aspect-ratio: 5 / 4;
+}
+
+/* The photo sits to the right and crosses into the dark invitation. */
+@media (min-width: 56rem) {
+  .meet-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    column-gap: var(--space-8);
+    align-items: end;
+  }
+
+  .meet-title {
+    grid-column: 1 / -1;
+  }
+
+  .meet-bio {
+    margin-bottom: 0;
+    padding-bottom: var(--space-12);
+  }
+
+  .meet-photo {
+    width: 100%;
+  }
+}

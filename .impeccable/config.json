@@ -1,0 +1,95 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "createdAt": "2026-10-28T20:41:08.516Z",
+        "reason": "Pinned in DESIGN.md: violet primary, Newsreader italic emphasis and Instrument Sans chosen by Maya on 2026-10-28 (design-log.md)"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/conversation.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.551Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/conversation.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.586Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/conversation.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.618Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/portrait.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.650Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/portrait.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.680Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/portrait.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.710Z",
+        "reason": "Spent decision sketch not chosen on 2026-10-28 (Home shape round); not shipped"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/letter.html"
+        ],
+        "createdAt": "2026-10-28T20:41:08.741Z",
+        "reason": "Placeholder label is absolutely positioned 16px inside the photo box; detector misreads the inset"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-28T20:41:12.981Z",
+        "reason": "Decision sketches use the DESIGN.md violet primary chosen by Maya on 2026-10-28; flat ink, no gradient"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-28T21:05:01.191Z",
+        "reason": "False positive: parser split the Instrument Sans font stack in the spent decision sketches; Instrument Sans is in DESIGN.md"
+      }
+    ]
+  }
+}

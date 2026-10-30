@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Home sketch: A letter from Carol</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; background: #FFFFFF; color: #1C1B22; font: 17px/1.55 "Instrument Sans", sans-serif; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 32px 96px; }
+  .name { font-family: Newsreader, serif; font-size: 24px; }
+  nav { display: flex; gap: 40px; font-weight: 600; font-size: 15px; }
+  main { display: grid; grid-template-columns: 280px 720px; gap: 96px; padding: 40px 0 0 200px; }
+  .photo { height: 360px; background: #3a3840; border-radius: 12px; position: relative; margin-top: 12px; }
+  .photo span { position: absolute; left: 16px; bottom: 16px; color: #fff; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .caption { margin-top: 14px; font-size: 14px; color: #5C5866; }
+  .letter { font-family: Newsreader, serif; font-size: 30px; line-height: 1.38; }
+  .letter p + p { margin-top: 20px; }
+  .letter em { color: #6B3FA0; }
+  .ifs { margin-top: 24px; font-family: "Instrument Sans", sans-serif; font-size: 18px; }
+  .ifs a { display: block; color: #6B3FA0; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; margin-top: 10px; }
+  .sign { margin-top: 28px; display: flex; align-items: center; gap: 28px; }
+  .sig { font-family: Newsreader, serif; font-style: italic; font-size: 34px; }
+  .pill { background: #6B3FA0; color: #fff; border-radius: 999px; padding: 14px 26px; font: 600 17px "Instrument Sans", sans-serif; }
+</style>
+</head>
+<body>
+<header>
+  <div class="name">Carol Fox</div>
+  <nav><span>About Carol</span><span>How I work</span><span>Get in touch</span></nav>
+</header>
+<main>
+  <div>
+    <div class="photo"><span>Portrait placeholder</span></div>
+    <p class="caption">Life and business coach, London and remote</p>
+  </div>
+  <div class="letter">
+    <p>Hello. I'm Carol, and for 20 years I've helped people work out <em>what they want next</em>, and how to get there.</p>
+    <p>Before coaching, I was a headhunter. I still read people quickly.</p>
+    <div class="ifs">
+      <a>If you're just starting out</a>
+      <a>If you're mid-career and want more from work</a>
+      <a>If you lead a team or a business</a>
+    </div>
+    <div class="sign"><span class="sig">Carol</span><span class="pill">Let's have a coffee, on me</span></div>
+  </div>
+</main>
+</body>
+</html>

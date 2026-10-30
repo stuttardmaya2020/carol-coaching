@@ -3,19 +3,22 @@
   Every colour, font and spacing value on the site comes from here, so
   changing one value here changes it everywhere. Impeccable reads this file.
 
-  Direction (chosen 2026-10-28): fonts from "Warm editorial",
-  colours from "Modern confident".
+  Direction (chosen 2026-10-30): violet and cream only, with black-and-white
+  photos. See DESIGN.md.
 */
 :root {
   /* Colour */
-  --color-bg: #ffffff;          /* White: page background */
-  --color-text: #1c1b22;        /* Charcoal: body text and headings */
-  --color-text-muted: #5c5866;  /* Secondary text, captions (6.6:1 on white) */
-  --color-primary: #6b3fa0;     /* Violet: buttons, links, key headings (7.4:1 on white) */
+  --color-cream: #f6f0e4;       /* Cream: the page */
+  --color-primary: #6b3fa0;     /* Violet: headlines on cream, full-width bands (6.5:1 with cream) */
   --color-primary-dark: #54307f;/* Violet, hover and pressed states */
-  --color-surface: #e9e1f4;     /* Lilac: tinted sections and cards */
-  --color-highlight: #f2b880;   /* Apricot: highlights and small accents only, never text */
-  --color-border: #e4e0ea;
+  --color-deep: #38205c;        /* Deep violet: split panel, the close, the footer (12.1:1 with cream) */
+  --color-ink: #2b1a40;         /* Violet-black: reading text on cream (14:1) */
+  --color-text-muted: #5f4f73;  /* Secondary text on cream (6.5:1) */
+  --color-text-on-violet: #e6dcf2; /* Secondary text on violet and deep violet */
+  --color-rule: #cbbfd9;        /* Thin rules on cream */
+  --color-rule-on-violet: #b9a3d4; /* Thin rules on violet */
+  --color-placeholder: #6e6a75; /* Grey for photos still needed (white label 5.3:1) */
+  --color-placeholder-text: #ffffff;
 
   /* Type */
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
@@ -24,12 +27,21 @@
   --text-sm: 0.875rem;   /* 14px */
   --text-base: 1.0625rem;/* 17px */
   --text-lg: 1.25rem;    /* 20px */
-  --text-xl: 1.75rem;    /* 28px */
-  --text-2xl: 2.5rem;    /* 40px */
-  --text-3xl: clamp(2.5rem, 6vw, 4rem); /* hero headline */
+  --text-xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.75rem);     /* steps, recognition: 24px to 28px */
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);    /* accordion rows, the word band: 28px to 40px */
+  --text-quote: clamp(1.5rem, 1.25rem + 1.1vw, 2.25rem); /* pull quotes: 24px to 36px */
+  --text-heading: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);/* section headings: 36px to 56px */
+  --text-display: clamp(2.75rem, 1rem + 4vw, 5rem);      /* hero and closing line: 44px to 80px */
+  --text-title: clamp(4rem, 1.5rem + 9vw, 7.5rem);       /* "Meet Carol": 64px to 120px */
 
-  --leading-tight: 1.1;
+  --weight-regular: 400;
+  --weight-bold: 600;
+
+  --leading-tight: 1.05;
+  --leading-quote: 1.3;
+  --leading-label: 1.3;
   --leading-body: 1.6;
+  --tracking-display: -0.03em;
 
   /* Spacing (steps of 8px) */
   --space-1: 0.5rem;
@@ -39,13 +51,29 @@
   --space-6: 3rem;
   --space-8: 4rem;
   --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* How far a photo crosses from one section into the next */
+  --overlap: clamp(3rem, 7vw, 6.5rem);
 
   /* Shape */
   --radius-sm: 6px;
-  --radius-md: 12px;
   --radius-pill: 999px;
+  --rule-width: 1px;
+  --focus-width: 3px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* fast start, gentle stop */
+  --duration-fast: 200ms;
 
   /* Layout */
-  --content-width: 72rem;
+  --content-width: 76rem;
   --text-width: 65ch;
+  --quote-width: 50rem;
+  --photo-small: 22rem;
+  --photo-large: 34rem;
+  --photo-wide: 42rem;
+  --tap-target: 2.75rem; /* 44px */
+  /* The left edge of .container, for sections that run to the page edge */
+  --page-edge: max(var(--space-6), calc((100vw - var(--content-width)) / 2 + var(--space-6)));
 }

@@ -1,0 +1,16 @@
+/* Each section sets the photo's size and shape; cover keeps it filling the frame. */
+.photo {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2);
+  background: var(--color-placeholder);
+  color: var(--color-placeholder-text);
+  font-size: var(--text-sm);
+  line-height: var(--leading-label);
+}
